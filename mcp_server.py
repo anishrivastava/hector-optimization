@@ -1,13 +1,13 @@
 import os
 import asyncio
 import mcp.types as types
-from mcp.server import Server
+from fastmcp import FastMCP
 from supabase import create_client, Client
 
 SUPABASE_URL = os.environ.get("SUPABASE_URL", "")
 SUPABASE_KEY = os.environ.get("SUPABASE_KEY", "")
 
-mcp = Server("hector-optimizer")
+mcp = FastMCP("hector-optimizer")
 _client: Client | None = None
 
 
